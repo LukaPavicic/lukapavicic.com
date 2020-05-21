@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import HomeScreen from './screens/HomeScreen';
+import ComingSoon from './screens/ComingSoon';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HomeScreen />
+    <ComingSoon />
   </React.StrictMode>,
   document.getElementById('root')
 );
