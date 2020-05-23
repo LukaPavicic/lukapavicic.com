@@ -1,64 +1,75 @@
 import React from 'react'
-import { CssBaseline, makeStyles, AppBar, Typography, Toolbar, Button, Container, Grid } from '@material-ui/core'
-import MainIllustration from '../images/mainpage.svg'
+import { CssBaseline, makeStyles, Typography, Container, MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import { IoIosPin } from 'react-icons/io'
+import { FaGithub, FaStackOverflow, FaTwitter } from 'react-icons/fa'
+import MyProjects from '../components/Home/MyProjects'
+import AboutMe from '../components/Home/AboutMe'
+import OtherTech from '../components/Home/OtherTech'
+import Footer from '../components/Home/Footer'
+import Contact from '../components/Home/Contact'
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-      },
-    title: {
-        flexGrow: 1,
-    },
-    appBar: {
-        backgroundColor: "#e74c3c"
-    },
-    mainContainer: {
-        height: "90vh",
-        marginTop: 20,
+    container: {
         display: "flex",
         flexDirection: "column",
-        width: "100%",
         alignItems: "center",
-        justifyContent: "center"
+        paddingTop: 100,
+        textAlign: "center"
     },
-    mainLeft: {
+    locationDiv: {
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
+        alignItems: "center",
         justifyContent: "center",
-        padding: 40
+        marginTop: 10,
+        color: "grey"
+    },
+}))
+
+let theme = createMuiTheme({
+    typography: {
+        "fontFamily": "Balsamiq Sans",
+        "color": "#27ae60"
+    },
+    palette: {
+        primary: { main: "#27ae60"},
+        secondary: { main: "#000" }
     }
-}));
+})
+
+theme = responsiveFontSizes(theme)
 
 export default function HomeScreen(props) {
 
     const classes = useStyles()
 
     return (
-        <div className={classes.root}>
-            <CssBaseline />
-            <AppBar position="sticky" className={classes.appBar}>
-                <Toolbar>                
-                    <Typography variant="h6" className={classes.title}>
-                        Luka Pavičić
-                    </Typography>
-                    <Button color="inherit">PROJECTS</Button>
-                </Toolbar>                
-            </AppBar>
-            <Container maxWidth="xl" className={classes.mainContainer}>
-                <Grid container>
-                    <Grid item xs={12} lg={6} sm={6} className={classes.mainLeft}>
-                        <Typography variant="h3">Hi, I am Luka Pavičić, a full-stack web developer.</Typography>
-                        <Typography variant="h6">Ruby, Rails, React, React Native</Typography>
-                        <Button variant="contained" style={{backgroundColor: "#e74c3c", color: "white", width: "auto", marginTop: 10}}>VIEW MORE</Button>
-                    </Grid>  
-                    <Grid item xs={12} lg={6} sm={6}>
-                        <img src={MainIllustration} width="80%"/>
-                    </Grid>                  
-                </Grid>
-            </Container>
-        </div>
+        <MuiThemeProvider theme={theme}>
+            <div className={classes.root}>
+                <CssBaseline />
+                <Container className={classes.container}>
+
+                    <Typography color="primary" variant="h1">Luka Pavičić</Typography>
+                    <Typography variant="h4">Full-Stack developer with experience in Ruby, Rails, React and React Native</Typography>
+                    <div className={classes.locationDiv}>
+                        <Typography variant="h4" style={{display: "flex", alignItems: "center", justifyContent: "center"}}><IoIosPin /> </Typography>
+                        <Typography variant="h4" style={{marginLeft: 10}}>Zagreb, Croatia</Typography>                                                
+                    </div>    
+                    <div style={{display: "flex", flexDirection: "row", marginTop: 20}}>
+                        <a href="https://github.com/LukaPavicic" target="_blank" style={{color: "black"}}><FaGithub style={{fontSize: 35}}/></a>
+                        <a href="https://stackoverflow.com/users/10249627/crodev?tab=profile" target="_blank" style={{color: "black"}}><FaStackOverflow style={{fontSize: 35, marginLeft: 30}}/></a>
+                        <a href="https://twitter.com/LukaPavicic4" target="_blank" style={{color: "black"}}><FaTwitter style={{fontSize: 35, marginLeft: 30}}/></a>
+                    </div>
+                    <AboutMe />
+                    <MyProjects />  
+                    <OtherTech />
+                    <Contact />   
+                    <Footer />  
+                </Container>
+            </div>
+        </MuiThemeProvider>        
     )
 }

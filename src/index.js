@@ -7,7 +7,7 @@ import ComingSoon from './screens/ComingSoon';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ComingSoon />
+    <HomeScreen />
   </React.StrictMode>,
   document.getElementById('root')
 );
