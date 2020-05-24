@@ -1,5 +1,5 @@
 import React from 'react'
-import { CssBaseline, makeStyles, Typography, Container, MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import { CssBaseline, makeStyles, Typography, Container, MuiThemeProvider, createMuiTheme, responsiveFontSizes, AppBar, Toolbar, Button, Link } from '@material-ui/core'
 import { IoIosPin } from 'react-icons/io'
 import { FaGithub, FaStackOverflow, FaTwitter } from 'react-icons/fa'
 import MyProjects from '../components/Home/MyProjects'
@@ -27,6 +27,17 @@ const useStyles = makeStyles(theme => ({
         marginTop: 10,
         color: "grey"
     },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    },
+    appBar: {
+        backgroundColor: "transparent",
+        color: "#27ae60",
+        boxShadow: "none"
+    }
 }))
 
 let theme = createMuiTheme({
@@ -37,7 +48,7 @@ let theme = createMuiTheme({
     palette: {
         primary: { main: "#27ae60"},
         secondary: { main: "#000" }
-    }
+    },
 })
 
 theme = responsiveFontSizes(theme)
@@ -50,8 +61,15 @@ export default function HomeScreen(props) {
         <MuiThemeProvider theme={theme}>
             <div className={classes.root}>
                 <CssBaseline />
-                <Container className={classes.container}>
-
+                <AppBar position="static" className={classes.appBar}>
+                    <Toolbar>                        
+                        <Typography variant="h6" className={classes.title}>
+                        
+                        </Typography>
+                        <Link href="/handbook"><Button color="inherit">Handbook</Button></Link>
+                    </Toolbar>
+                </AppBar>
+                <Container className={classes.container}>                    
                     <Typography color="primary" variant="h1">Luka Pavičić</Typography>
                     <Typography variant="h4">Full-Stack developer with experience in Ruby, Rails, React and React Native</Typography>
                     <div className={classes.locationDiv}>

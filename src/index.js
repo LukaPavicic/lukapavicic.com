@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import HomeScreen from './screens/HomeScreen';
-import ComingSoon from './screens/ComingSoon';
+import AppRouter from './AppRouter'
 
 ReactDOM.render(
   <React.StrictMode>
-    <HomeScreen />
+    <AppRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );
