@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import CodeBlock from '../../components/Other/CodeBlock'
 import '../../css/articles.css'
 import Footer from '../../components/Home/Footer'
+import Navigation from '../../components/Global/Navigation'
 
 const useStyles = theme => ({
     root: {
@@ -62,6 +63,9 @@ class RNHereMaps extends React.Component {
         return (
             <MuiThemeProvider theme={theme}>
                 <CssBaseline />
+
+                <Navigation />
+
                 <Container className={classes.container}>
                     <Typography variant="h2" color="primary">How to implement HERE maps in React Native</Typography>
                     <Typography variant="h5">By <Link href="/">Luka Pavičić</Link> in <Link href="/handbook" style={{color: "#27ae60"}}>Handbook</Link></Typography>
