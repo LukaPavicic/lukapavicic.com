@@ -1,8 +1,7 @@
 import React from 'react'
-import { makeStyles, Typography, Paper, Grid, Button } from '@material-ui/core'
-import { FaGithub, FaGlobe } from 'react-icons/fa'
+import { Typography } from '@material-ui/core'
 
-export default function AboutMe(props) {
+export default function AboutMe() {
     return (
         <div>
             <Typography variant="h3" style={{marginTop: 80}}>About Me</Typography>

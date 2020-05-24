@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles, CssBaseline, createMuiTheme, MuiThemeProvider, responsiveFontSizes, Container, Typography, Paper, Grid, Link } from '@material-ui/core'
+import { withStyles, CssBaseline, createMuiTheme, MuiThemeProvider, responsiveFontSizes, Container, Typography, Link } from '@material-ui/core'
 import MDSource from '../../md/RNHereMaps.md'
 import ReactMarkdown from 'react-markdown'
 import CodeBlock from '../../components/Other/CodeBlock'
@@ -70,7 +70,7 @@ class RNHereMaps extends React.Component {
                     <div style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "flex-start", marginTop: 50, textAlign: "left"}}>
                         <Typography variant="h6">
                             <b>NOTE: I originally came up with this guide by writing an answer to user's question on StackOverflow. 
-                            You can find it <a style={{color: "#27ae60"}} href="https://stackoverflow.com/a/58068474/10249627" target="_blank">here.</a></b>
+                            You can find it <a rel="noopener noreferrer" style={{color: "#27ae60"}} href="https://stackoverflow.com/a/58068474/10249627" target="_blank">here.</a></b>
                         </Typography>                                            
 
                         <ReactMarkdown className={classes.mdStyle} renderers={{code: CodeBlock}} source={markdown} />

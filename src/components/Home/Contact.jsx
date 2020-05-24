@@ -1,6 +1,6 @@
 import React from 'react'
-import { makeStyles, Typography, Paper, Grid, Button } from '@material-ui/core'
-import { FaGithub, FaGlobe, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { Typography } from '@material-ui/core'
+import { FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa'
 
 export default function AboutMe(props) {
     return (

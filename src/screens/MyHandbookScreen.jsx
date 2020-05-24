@@ -1,6 +1,8 @@
 import React from 'react'
-import { makeStyles, CssBaseline, createMuiTheme, MuiThemeProvider, responsiveFontSizes, Container, Typography, Paper, Grid, Link } from '@material-ui/core'
+import { makeStyles, CssBaseline, createMuiTheme, MuiThemeProvider, responsiveFontSizes, Container, Typography, Paper, Grid } from '@material-ui/core'
 import Footer from '../components/Home/Footer'
+import Navigation from '../components/Global/Navigation'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -49,6 +51,9 @@ export default function MyHandbookScreen(props) {
     return (
         <MuiThemeProvider theme={theme}>
             <CssBaseline />
+
+            <Navigation />
+
             <Container className={classes.container}>
                 <Typography variant="h1" color="primary">Handbook</Typography>
                 <Typography variant="h5">By <Link href="/" style={{color: "#27ae60"}}>Luka Pavičić</Link></Typography>
@@ -58,7 +63,7 @@ export default function MyHandbookScreen(props) {
                     <Typography variant="h4" style={{color: "grey"}}>React Native</Typography>
                     <Grid container spacing={4} style={{marginTop: 1}}>
                         <Grid item xs={12} sm={12} lg={6}>
-                            <Link href="/handbook/how-to-implement-here-maps-in-react-native" style={{textDecoration: "none"}}>
+                            <Link to="/handbook/how-to-implement-here-maps-in-react-native" style={{textDecoration: "none"}}>
                                 <Paper elevation={2} className={classes.articlePaper}>
                                     <Typography variant="h5" color="primary">
                                         How to implement HERE maps in React Native

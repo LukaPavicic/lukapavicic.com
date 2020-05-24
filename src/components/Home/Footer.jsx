@@ -1,7 +1,5 @@
 import React from 'react'
-import { makeStyles, Typography, Paper, Grid, Button } from '@material-ui/core'
-import { FaGithub, FaGlobe } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Typography } from '@material-ui/core'
 
 export default function OtherTech(props) {
     return (

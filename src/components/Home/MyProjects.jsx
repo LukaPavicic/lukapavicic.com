@@ -23,7 +23,7 @@ export default function MyProjects(props) {
                         <Typography variant="h4" color="primary">SanicYT</Typography>
                         <Typography variant="h5">Really fast and easy to use YouTube songs downloader</Typography>
                         <Typography variant="h6">Tech used: Ruby, Sinatra, React</Typography>                            
-                        <img src={SanicPreview} width="100%"/>    
+                        <img src={SanicPreview} width="100%" alt="preview"/>    
 
                         <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-around", marginTop: 10}}>
                             <Button onClick={() => window.open("https://github.com/LukaPavicic/SanicYT", "_blank")} variant="contained" style={{backgroundColor: "#27ae60", color: "white"}}>
@@ -40,7 +40,7 @@ export default function MyProjects(props) {
                         <Typography variant="h4" color="primary">Upvote</Typography>
                         <Typography variant="h5">Reddit clone web app developed for final high school project</Typography>
                         <Typography variant="h6">Tech used: Python, Django, React, Bootstrap</Typography>      
-                        <img src={UpvotePreview} width="100%"/> 
+                        <img src={UpvotePreview} width="100%" alt="preview"/> 
 
                         <div style={{display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-around", marginTop: 10}}>
                             <Button onClick={() => window.open("https://github.com/LukaPavicic/upvote-backend", "_blank")} variant="contained" style={{backgroundColor: "#27ae60", color: "white"}}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CssBaseline, makeStyles, Typography, Container, MuiThemeProvider, createMuiTheme, responsiveFontSizes, AppBar, Toolbar, Button, Link } from '@material-ui/core'
+import { CssBaseline, makeStyles, Typography, Container, MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core'
 import { IoIosPin } from 'react-icons/io'
 import { FaGithub, FaStackOverflow, FaTwitter } from 'react-icons/fa'
 import MyProjects from '../components/Home/MyProjects'
@@ -7,6 +7,7 @@ import AboutMe from '../components/Home/AboutMe'
 import OtherTech from '../components/Home/OtherTech'
 import Footer from '../components/Home/Footer'
 import Contact from '../components/Home/Contact'
+import Navigation from '../components/Global/Navigation'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -61,14 +62,9 @@ export default function HomeScreen(props) {
         <MuiThemeProvider theme={theme}>
             <div className={classes.root}>
                 <CssBaseline />
-                <AppBar position="static" className={classes.appBar}>
-                    <Toolbar>                        
-                        <Typography variant="h6" className={classes.title}>
-                        
-                        </Typography>
-                        <Link href="/handbook"><Button color="inherit">Handbook</Button></Link>
-                    </Toolbar>
-                </AppBar>
+                
+                <Navigation />
+
                 <Container className={classes.container}>                    
                     <Typography color="primary" variant="h1">Luka Pavičić</Typography>
                     <Typography variant="h4">Full-Stack developer with experience in Ruby, Rails, React and React Native</Typography>
@@ -77,9 +73,9 @@ export default function HomeScreen(props) {
                         <Typography variant="h4" style={{marginLeft: 10}}>Zagreb, Croatia</Typography>                                                
                     </div>    
                     <div style={{display: "flex", flexDirection: "row", marginTop: 20}}>
-                        <a href="https://github.com/LukaPavicic" target="_blank" style={{color: "black"}}><FaGithub style={{fontSize: 35}}/></a>
-                        <a href="https://stackoverflow.com/users/10249627/crodev?tab=profile" target="_blank" style={{color: "black"}}><FaStackOverflow style={{fontSize: 35, marginLeft: 30}}/></a>
-                        <a href="https://twitter.com/LukaPavicic4" target="_blank" style={{color: "black"}}><FaTwitter style={{fontSize: 35, marginLeft: 30}}/></a>
+                        <a rel="noopener noreferrer" href="https://github.com/LukaPavicic" target="_blank" style={{color: "black"}}><FaGithub style={{fontSize: 35}}/></a>
+                        <a rel="noopener noreferrer" href="https://stackoverflow.com/users/10249627/crodev?tab=profile" target="_blank" style={{color: "black"}}><FaStackOverflow style={{fontSize: 35, marginLeft: 30}}/></a>
+                        <a rel="noopener noreferrer" href="https://twitter.com/LukaPavicic4" target="_blank" style={{color: "black"}}><FaTwitter style={{fontSize: 35, marginLeft: 30}}/></a>
                     </div>
                     <AboutMe />
                     <MyProjects />  
