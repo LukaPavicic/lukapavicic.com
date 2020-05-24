@@ -1,7 +1,9 @@
+## HERE Developer Account Setup
 First of all, as you probably know you need to make an account at [HERE Developer webiste](https://developer.here.com/).
 
 After you have made an account, you have to create a project(you can get a Freemium plan for free and it has plenty of requests available for free, upgrade if you need more). After that you need to "Generate App" for REST & XYZ HUB API/CLI at your project page. With that, you will recieve APP ID and APP CODE. With all this, HERE Developer Account setup is complete.
 
+## React Native Code
 Lets jump to React Native now.
 
 First of all you need to install a npm package called `react-native-maps` which we will use to display data that HERE provides. You can see installation instructions [here](https://github.com/react-native-community/react-native-maps).
@@ -137,6 +139,7 @@ render() {
   }
 }
 ```
+## Conclusion
 
 So here it is. I tried to make it as detailed as possible to make it easy to understand everything.
 
