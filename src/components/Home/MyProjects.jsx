@@ -1,7 +1,7 @@
 import React from 'react'
 import SanicPreview from '../../images/sanicpreview.png'
 import UpvotePreview from '../../images/upvotepreview.png'
-import { makeStyles, Typography, Paper, Grid, Button } from '@material-ui/core'
+import { makeStyles, Typography, Paper, Grid, Button, Link } from '@material-ui/core'
 import { FaGithub, FaGlobe } from 'react-icons/fa'
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +20,7 @@ export default function MyProjects(props) {
             <Grid spacing={3} container style={{marginTop: 20}}>
                 <Grid item xs={12} lg={6} sm={12}>
                     <Paper elevation={2} className={classes.singleProjectPaper}>
-                        <Typography variant="h4" color="primary">SanicYT</Typography>
+                        <Link target="_blank" href="https://sanicyt.lukapavicic.com"><Typography variant="h4" color="primary">SanicYT</Typography></Link>
                         <Typography variant="h5">Really fast and easy to use YouTube songs downloader</Typography>
                         <Typography variant="h6">Tech used: Ruby, Sinatra, React</Typography>                            
                         <img src={SanicPreview} width="100%" alt="preview"/>    
@@ -50,6 +50,7 @@ export default function MyProjects(props) {
                     </Paper>
                 </Grid>
             </Grid>
+            <Typography variant="h5" style={{marginTop: 25}}>And more that aren't finished yet...</Typography>
         </div>
     )
 }

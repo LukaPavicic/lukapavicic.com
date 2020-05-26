@@ -3,6 +3,7 @@ import { makeStyles, CssBaseline, createMuiTheme, MuiThemeProvider, responsiveFo
 import Footer from '../components/Home/Footer'
 import Navigation from '../components/Global/Navigation'
 import { Link } from 'react-router-dom'
+import Article from '../components/Handbook/Article'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -60,25 +61,27 @@ export default function MyHandbookScreen(props) {
 
                 <Typography variant="h5" style={{marginTop: 40}}>In this handbook I will document anything useful I find about programming.</Typography>
                 <div className={classes.categoriesContainer}>
-                    <Typography variant="h4" style={{color: "grey"}}>React Native</Typography>
+
+                    <Typography variant="h4" style={{color: "grey"}}>Ruby On Rails</Typography>
                     <Grid container spacing={4} style={{marginTop: 1}}>
-                        <Grid item xs={12} sm={12} lg={6}>
-                            <Link to="/handbook/how-to-implement-here-maps-in-react-native" style={{textDecoration: "none"}}>
-                                <Paper elevation={2} className={classes.articlePaper}>
-                                    <Typography variant="h5" color="primary">
-                                        How to implement HERE maps in React Native
-                                    </Typography>
-                                    <Typography variant="h6" style={{color: "grey"}}>
-                                        Sep 23 '19
-                                    </Typography>
-                                    <Typography variant="h6" style={{marginTop: 20}}>   
-                                        Step-by-step guide on how to implement HERE maps with React Native
-                                    </Typography>
-                                </Paper>
-                            </Link>                            
-                        </Grid>
+                        <Article 
+                            articleTitle="How to setup Rails for API-only development"
+                            articleDescription="Step-by-step guide on how to setup Rails for API-only development"
+                            articlePublishDate="May 25 '20"
+                            articleLink="/handbook/how-to-setup-rails-for-api-only-development"
+                        />                         
                     </Grid>
-                </div>                
+
+                    <Typography variant="h4" style={{color: "grey", marginTop: 30}}>React Native</Typography>
+                    <Grid container spacing={4} style={{marginTop: 1}}>
+                        <Article 
+                            articleTitle="How to implement HERE maps in React Native"
+                            articleDescription="Step-by-step guide on how to implement HERE maps with React Native"
+                            articlePublishDate="Sep 23 '19"
+                            articleLink="/handbook/how-to-implement-here-maps-in-react-native"
+                        />                         
+                    </Grid>                    
+                </div>
             </Container>
             <Footer />
         </MuiThemeProvider>

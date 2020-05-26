@@ -1,3 +1,14 @@
 a {
     color: #27ae60 !important;
 }
+
+code {
+    color: #27ae60;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+pre code {
+    color: black;
+}
