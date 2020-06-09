@@ -57,7 +57,7 @@ export default function MyHandbookScreen(props) {
 
             <Container className={classes.container}>
                 <Typography variant="h1" color="primary">Handbook</Typography>
-                <Typography variant="h5">By <Link href="/" style={{color: "#27ae60"}}>Luka Pavičić</Link></Typography>
+                <Typography variant="h5">By <Link to="/" style={{color: "#27ae60"}}>Luka Pavičić</Link></Typography>
 
                 <Typography variant="h5" style={{marginTop: 40}}>In this handbook I will document anything useful I find about programming.</Typography>
                 <div className={classes.categoriesContainer}>
@@ -69,7 +69,13 @@ export default function MyHandbookScreen(props) {
                             articleDescription="Step-by-step guide on how to setup Rails for API-only development"
                             articlePublishDate="May 25 '20"
                             articleLink="/handbook/how-to-setup-rails-for-api-only-development"
-                        />                         
+                        /> 
+                        <Article 
+                            articleTitle="Setting Up PostgreSQL in Rails"
+                            articleDescription="Step-by-step guide on how to setup PostgreSQL for Rails"
+                            articlePublishDate="Jun 9 '20"
+                            articleLink="/handbook/setting-up-postgresql-for-rails"
+                        />                          
                     </Grid>
 
                     <Typography variant="h4" style={{color: "grey", marginTop: 30}}>React Native</Typography>

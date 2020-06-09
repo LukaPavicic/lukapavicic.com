@@ -7,7 +7,8 @@ const useStyles = makeStyles(theme => ({
         padding: 20,
         display: "flex",
         flexDirection: "column",
-        alignItems: "flex-start"
+        alignItems: "flex-start",
+        height: "100%"
     }
 }))
 
