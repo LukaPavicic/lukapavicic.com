@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 
 let theme = createMuiTheme({
     typography: {
-        "fontFamily": "Balsamiq Sans",
+        "fontFamily": "Montserrat",
         "color": "#27ae60"
     },
     palette: {

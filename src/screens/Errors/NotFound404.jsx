@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 let theme = createMuiTheme({
     typography: {
-        "fontFamily": "Balsamiq Sans",
+        "fontFamily": "Montserrat",
         "color": "#27ae60"
     },
     palette: {

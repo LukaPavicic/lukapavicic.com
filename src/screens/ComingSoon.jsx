@@ -6,7 +6,7 @@ export default function ComingSoon(props) {
     return (
         <Container style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh"}}>
             <CssBaseline />
-            <Typography style={{fontFamily: "Balsamiq Sans", color: "#27ae60"}} variant="h1">Coming soon.</Typography>
+            <Typography style={{fontFamily: "Montserrat", color: "#27ae60"}} variant="h1">Coming soon.</Typography>
             <div style={{display: "flex", flexDirection: "row", marginTop: 10}}>
                 <a href="https://github.com/LukaPavicic" target="_blank" style={{color: "black"}}><FaGithub style={{fontSize: 35}}/></a>
                 <a href="https://stackoverflow.com/users/10249627/crodev?tab=profile" target="_blank" style={{color: "black"}}><FaStackOverflow style={{fontSize: 35, marginLeft: 30}}/></a>
