@@ -62,7 +62,7 @@ export default function MyHandbookScreen(props) {
                 <Typography variant="h5" style={{marginTop: 40}}>In this handbook I will document anything useful I find about programming.</Typography>
                 <div className={classes.categoriesContainer}>
 
-                    <Typography variant="h4" style={{color: "grey"}}>Ruby On Rails</Typography>
+                    <Typography variant="h4" style={{color: "grey"}}>Ruby/Ruby On Rails</Typography>
                     <Grid container spacing={4} style={{marginTop: 1}}>
                         <Article 
                             articleTitle="How to setup Rails for API-only development"
@@ -75,6 +75,12 @@ export default function MyHandbookScreen(props) {
                             articleDescription="Step-by-step guide on how to setup PostgreSQL for Rails"
                             articlePublishDate="Jun 9 '20"
                             articleLink="/handbook/setting-up-postgresql-for-rails"
+                        /> 
+                        <Article 
+                            articleTitle="Nifty Ruby and Rails features"
+                            articleDescription="This is a doc which shows all the nifty, useful and cool features I found about Ruby and Rails while learning it."
+                            articlePublishDate="Dec 6 '20"
+                            articleLink="/handbook/nifty-ruby-and-rails-features"
                         />                          
                     </Grid>
 
